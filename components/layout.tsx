@@ -65,7 +65,7 @@ export default function Layout({ children, home }: any) {
             <h2 className={utilStyles.headingLg}>
               <Link href="/">
                 {/* aタグは入れない（入れるとエラーになる） */}
-                <div className={utilStyles.colorInherit}>{name}</div>
+                {name}
               </Link>
             </h2>
           </>
