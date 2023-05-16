@@ -1,3 +1,7 @@
+// Polishing the Index Page
+import Link from 'next/link'
+import Date from '../components/date'
+
 import Layout from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
@@ -22,11 +26,15 @@ export default function Home({ allPostsData }: any) {
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }: any) => (
             <li className={utilStyles.listItem} key={id}>
-              {title}
+              {/* Polishing the Index Page */}
+              <Link href={`/posts/${id}`}>
+                {/* aタグは入れない（入れるとエラーになる） */}
+                {title}
+              </Link>
               <br />
-              {id}
-              <br />
-              {date}
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
             </li>
           ))}
         </ul>
