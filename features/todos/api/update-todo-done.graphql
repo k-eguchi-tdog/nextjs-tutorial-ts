@@ -1,0 +1,11 @@
+mutation UpdateTodoDone (
+  $id: Int!,
+  $done: Boolean!
+){
+  updateTodoDone (
+    id: $id,
+    done: $done
+  ){
+    done
+  }
+}

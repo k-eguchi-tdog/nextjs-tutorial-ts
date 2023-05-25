@@ -1,0 +1,13 @@
+query GetTodos{
+  todos {
+    id
+    name
+    detail
+    priority {
+      id
+      name
+    }
+    deadline
+    done
+  }
+}

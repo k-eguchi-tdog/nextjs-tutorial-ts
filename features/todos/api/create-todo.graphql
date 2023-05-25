@@ -1,0 +1,21 @@
+mutation CreateTodo (
+  $name: String!,
+  $deadline: DateTime!,
+  $detail: String!,
+  $priority_id: Int!,
+  $done: Boolean!
+){
+  createTodo (
+    name: $name,
+    deadline: $deadline,
+    detail: $detail,
+    priority_id: $priority_id,
+    done: $done
+  ){
+    name
+    deadline
+    detail
+    priority_id
+    done
+  }
+}
